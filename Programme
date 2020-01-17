@@ -1,0 +1,89 @@
+using System;
+
+namespace Checkpoint_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Exercice 1 : Somme d'un tableau  
+            
+            // Tableau d'entiers
+ 
+            int [] UserArray = ReturnArray();
+            
+
+           // Somme du tableau
+            Console.WriteLine("Sum of you array : ");
+            double Sum = SumArray(UserArray);
+
+            // Moyenne des éléments du tableau
+           
+            Console.WriteLine(MeanArray(Sum));
+
+        }
+
+        // méthode statique qui retourne un tableau d'entiers spécifié par l'utilisateur
+
+        static int[] ReturnArray()
+        {
+            Console.Write("How many value do you want to input ?");
+            int NumberInteger = Convert.ToInt32(Console.ReadLine());
+            
+            int[] IntegerArray = new int[NumberInteger];
+
+            for (int i = 0; i < NumberInteger; i++)
+            {
+                Console.WriteLine("Put integers in the array : ");
+                int Integer = Convert.ToInt32(Console.ReadLine());
+                IntegerArray[i] = Integer;
+                           
+            }
+            Console.WriteLine("Your Array : ");
+            for(int i=0; i<NumberInteger; i++)
+            {
+                Console.WriteLine(IntegerArray[i]);
+            }
+            
+            return IntegerArray;            
+
+           
+        }
+
+        // méthode statique qui retourne la somme des éléments d'un tableau d'entiers
+
+        static int SumArray(int [] SumArray)
+        {
+            int Sum = 0;
+            
+            
+
+            for (int i = 0; i <  SumArray.Length; i++)
+            {
+                Sum = Sum + SumArray[i];
+            }
+            Console.WriteLine(Sum);
+            return Sum;
+        }
+
+        // Exercice 2 : Moyenne d'un tableau
+
+        // Méthode statique qui retourne la moyenne des éléments d'un tableau d'entiers
+        static double MeanArray(double Sum)
+        {
+            
+            double Mean = SumArray() / NumberValues;
+            Console.WriteLine("Mean of you array : ");
+            Console.WriteLine(Mean);
+            return Mean;
+        }
+
+        // Exercice 3 : Trier un tableau
+
+        // Algorithme qui trie par ordre croissant tous les éléments d'un tableau
+        /*static int Classify()
+        {
+
+        }*/
+    }
+}
